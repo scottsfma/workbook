@@ -1,0 +1,52 @@
+.head1 {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.head2 {
+  font-size: 17px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+body {
+  margin: 0 auto;
+  background-position: center;
+  background-size: contain;
+  border-top: 3px solid red;
+  border-bottom: 10px solid green;
+  border-left: 5px dashed #000;
+  border-right: 5px dashed #000;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  padding: 10px 0px 10px 0px;
+  color: white;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.menu a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menu-log {
+  right: auto;
+  float: right;
+}
+
+.body_sec {
+  margin-left: 20px;
+}
