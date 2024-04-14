@@ -20,16 +20,47 @@ header {
   top: 15px;
   left: 20px;
   border: none;
-  cursor: pointer;
+}
+
+.off-screen-menu {
+  background-color: rgb(34, 37, 49);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: 0.3s ease;
+}
+
+.off-screen-menu a {
+  color: white;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+.off-screen-menu a:hover {
+  color: #04aa6d;
+  text-decoration: revert;
 }
 
 h1 {
   color: white;
-  position: absolute;
   left: 120px;
   top: 0;
   line-height: 80px;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 header p {
@@ -55,10 +86,12 @@ main li {
 
 p1 {
   color: red;
+  text-align: center;
 }
 
 p2 {
   color: black;
+  text-align: center;
 }
 
 .tagline {
@@ -75,7 +108,7 @@ p2 {
 .files {
   background-color: antiquewhite;
   color: white;
-  height: 85vh;
+  height: 120vh;
   background-image: url("./cssimg/woodenboard.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,14 +124,19 @@ p2 {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  background-color: red;
   border: 4px solid #acacac;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
-.Quote {
-  background-color: #485652;
+.files a:hover {
+  background-color: #04aa6d;
   color: white;
+}
+
+.Quote {
+  background-color: black;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -106,11 +144,32 @@ p2 {
   justify-content: center;
   font-size: 30px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  animation: effect 2s linear infinite;
+  --color-1: red;
+  --color-2: white;
+}
+
+@keyframes effect {
+  0% {
+    color: var(--color-1);
+  }
+  25% {
+    color: var(--color-2);
+  }
+  50% {
+    color: var(--color-1);
+  }
+  75% {
+    color: var(--color-2);
+  }
+  100% {
+    color: var(--color-1);
+  }
 }
 
 .footer {
-  background-color: black;
-  color: #b7b7b7;
+  background-color: grey;
+  color: antiquewhite;
   height: 60px;
   display: flex;
   flex-direction: column;
@@ -130,16 +189,5 @@ p2 {
   }
   .files {
     font-size: 40px;
-  }
-  .menubutton {
-    display: block;
-    background-color: transparent;
-    color: white;
-    font-size: 35px;
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    border: none;
-    cursor: pointer;
   }
 }
